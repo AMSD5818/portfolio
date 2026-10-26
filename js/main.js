@@ -12,6 +12,14 @@ const pillars=[
  ["03","Lab","Prototypes et preuves de concept qui explorent de nouveaux domaines : IoT, IA, automatisation."],
 ];
 
+const formations=[
+ ["Fondamentaux","Prise en main du PC et pack Office."],
+ ["Logique & programmation","Algorithmique, programmation orientée objet, puis C, C++, C#, Java, PHP ou Python."],
+ ["Développement web","HTML, CSS et JavaScript."],
+ ["Analyse & conception","Merise et UML."],
+ ["Soutien scolaire","Pack d'accompagnement en complément des parcours."],
+];
+
 // maturity: academic | proto | poc | product
 const caseStudies=[
  {name:"Assistance Conseiller Intelligent",maturity:"product",maturityLabel:"Produit potentiel",
@@ -120,6 +128,9 @@ document.getElementById('pillar-grid').innerHTML=pillars.map(([num,n,d])=>
   `<div class="pillar reveal in"><div class="num">${num}</div><h3>${n}</h3><p>${d}</p></div>`).join('');
 
 document.getElementById('service-grid').innerHTML=services.map(([n,d])=>
+  `<div class="tool-card reveal in"><b>${n}</b><span>${d}</span></div>`).join('');
+
+document.getElementById('formation-grid').innerHTML=formations.map(([n,d])=>
   `<div class="tool-card reveal in"><b>${n}</b><span>${d}</span></div>`).join('');
 
 const mClass={academic:"m-academic",proto:"m-proto",poc:"m-poc",product:"m-product"};
